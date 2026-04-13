@@ -1,0 +1,35 @@
+---
+title: 'Building BeamBell: From Zero to Nine Live Locations'
+abstract: How I co-founded and built an AI voice receptionist platform from scratch, scaling to 9 live locations in 6 weeks while cutting response latency by 77.5%.
+date: '2025-06-15'
+banner: /static/hello-world-banner.jpg
+featured: true
+---
+
+## The Problem
+
+Small businesses lose countless calls every day. Missed calls mean missed revenue — a dental office that can't answer during a busy morning, a salon that loses bookings while stylists are with clients. Hiring a full-time receptionist is expensive. Existing solutions felt robotic and couldn't handle the nuance of real conversations.
+
+That's where BeamBell started.
+
+## Building the Voice Pipeline
+
+The hardest technical challenge was latency. When someone calls a business, they expect a natural conversation — not awkward pauses while an AI thinks. Our first prototype had a 4-second response time, which felt like an eternity on a phone call.
+
+We rebuilt the voice pipeline from the ground up using WebSockets and WebRTC for real-time audio streaming, connected to streaming LLMs that could begin responding before fully processing the input. The result: 0.9-second response times — a 77.5% reduction that made conversations feel natural.
+
+## The Stack
+
+The platform runs on React and Next.js on the frontend, with Node.js and Supabase/PostgreSQL on the backend. The real-time voice pipeline uses WebSockets for bidirectional audio streaming and WebRTC for low-latency connections. We integrated with CRM systems and calendar APIs so the AI receptionist could actually book appointments and update records in real time.
+
+## Scaling to 9 Locations
+
+Within six weeks of launch, we had 9 live locations using BeamBell daily. The key was working directly with clients — meeting with business owners, understanding their workflows, and iterating fast. Every feature we shipped came from real user feedback, not assumptions.
+
+## What I Learned
+
+Building BeamBell taught me that the best products come from being uncomfortably close to your users. The technical challenges were significant, but the real differentiator was shipping fast and listening carefully. When you're building something new, speed of iteration matters more than perfection.
+
+---
+
+*BeamBell is live at [beambell.com](https://beambell.com). If you're interested in AI voice technology or building products from zero to one, I'd love to chat.*
