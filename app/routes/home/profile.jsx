@@ -28,9 +28,11 @@ const ProfileText = ({ visible, titleId }) => (
       scaled to 9 live locations in its first 6 weeks.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I co-founded <Link href="https://esecuw.org">ESEC</Link>, UW&apos;s entrepreneurship and
-      startup club, and I&apos;m studying Informatics at the University of Washington. I&apos;m
-      always building something new — feel free to drop me a line.
+      Alongside that, I lead a team of nine engineers as Technical Program Lead at Propper
+      AI, and I co-founded <Link href="https://esecuw.org">ESEC</Link>, UW&apos;s
+      entrepreneurship and startup club. I&apos;m studying Informatics at the University of
+      Washington, building on a 900+ hour full-stack bootcamp at Coding Dojo. I&apos;m always
+      building something new — feel free to drop me a line.
     </Text>
   </Fragment>
 );

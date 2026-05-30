@@ -53,10 +53,18 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
+  const projectFour = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [
+      intro,
+      projectOne,
+      projectTwo,
+      projectThree,
+      projectFour,
+      details,
+    ];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -159,6 +167,27 @@ export const Home = () => {
             {
               srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
               placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-4"
+        alternate
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
+        index={4}
+        title="Multi-agent AWS infrastructure builder"
+        description="CloudDraft discovers live AWS resources and generates validated Infrastructure-as-Code through LLM-powered multi-agent orchestration"
+        buttonText="View project"
+        buttonLink="/projects/clouddraft"
+        model={{
+          type: 'laptop',
+          alt: 'CloudDraft AWS infrastructure builder',
+          textures: [
+            {
+              srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
+              placeholder: sprTexturePlaceholder,
             },
           ],
         }}

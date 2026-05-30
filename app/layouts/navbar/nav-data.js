@@ -30,4 +30,9 @@ export const socialLinks = [
     url: `https://www.linkedin.com/in/${config.linkedin}`,
     icon: 'linkedin',
   },
+  {
+    label: 'Email',
+    url: 'mailto:arvin@hakakian.me',
+    icon: 'mail',
+  },
 ];
