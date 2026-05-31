@@ -69,8 +69,8 @@ export const CodeScope = () => {
               <ProjectSectionHeading>LLM-powered queries</ProjectSectionHeading>
               <ProjectSectionText>
                 Integrated LLM-based summarization to support natural language queries
-                about codebase changes. Engineers can ask questions like "what changed in
-                the auth module this quarter?" and receive structured summaries generated
+                about codebase changes. Engineers can ask questions like “what changed in
+                the auth module this quarter?” and receive structured summaries generated
                 from commit history and diff analysis — making historical context
                 immediately accessible without manual log archaeology.
               </ProjectSectionText>

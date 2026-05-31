@@ -27,15 +27,17 @@ npm run dev:storybook
 
 ## Deployment
 
-The site is hosted on Cloudflare Pages. Deploy with:
+The site is deployed on [Vercel](https://vercel.com). Connect the repository in the Vercel dashboard (it auto-detects Remix via the `@vercel/remix` preset), or deploy from the CLI:
 
 ```bash
-npm run deploy
+vercel
 ```
+
+Set the contact-form environment variables (see below) under the project's **Settings → Environment Variables** in Vercel.
 
 ## Contact form
 
-To get the contact form working create an AWS account and set up SES (Simple Email Service). Then plug your details into `.dev.vars.example` and rename it to `.dev.vars`. You'll also need to add these as environment variables in the Cloudflare dashboard for it to work in production.
+To get the contact form working, create an AWS account and set up SES (Simple Email Service). Copy `.env.example` to `.env` and fill in your details for local development, then add the same variables in the Vercel dashboard for production.
 
 ## Credits
 
