@@ -20,7 +20,7 @@ const baseTokens = {
   fontWeightRegular: 400,
   fontWeightMedium: 500,
   fontWeightBold: 700,
-  fontSizeH0: pxToRem(140),
+  fontSizeH0: pxToRem(112),
   fontSizeH1: pxToRem(100),
   fontSizeH2: pxToRem(58),
   fontSizeH3: pxToRem(38),
@@ -57,7 +57,7 @@ const baseTokens = {
 
 // Tokens that change based on viewport size
 const tokensDesktop = {
-  fontSizeH0: pxToRem(120),
+  fontSizeH0: pxToRem(96),
   fontSizeH1: pxToRem(80),
 };
 
@@ -67,7 +67,7 @@ const tokensLaptop = {
   maxWidthL: '1000px',
   maxWidthXL: '1100px',
   spaceOuter: '48px',
-  fontSizeH0: pxToRem(100),
+  fontSizeH0: pxToRem(84),
   fontSizeH1: pxToRem(70),
   fontSizeH2: pxToRem(50),
   fontSizeH3: pxToRem(36),
@@ -76,7 +76,7 @@ const tokensLaptop = {
 };
 
 const tokensTablet = {
-  fontSizeH0: pxToRem(80),
+  fontSizeH0: pxToRem(72),
   fontSizeH1: pxToRem(60),
   fontSizeH2: pxToRem(48),
   fontSizeH3: pxToRem(32),

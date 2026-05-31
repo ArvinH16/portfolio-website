@@ -234,6 +234,7 @@
 }
 
 .title {
+  font-size: calc(var(--fontSizeH3) * 0.85);
   margin-bottom: var(--spaceL);
   transition-property: opacity;
   transition-timing-function: var(--bezierFastoutSlowin);
