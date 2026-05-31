@@ -110,6 +110,20 @@
     }
   }
 
+  /* Shift the laptop left on alternate (text-on-right) rows so the bright
+     screenshot doesn't sit behind the title text and kill contrast. */
+  .summary[data-alternate='true'] &[data-device='laptop'] {
+    left: -6%;
+
+    @media (--mediaLaptop) {
+      left: -4%;
+    }
+
+    @media (--mediaTablet) {
+      left: 0;
+    }
+  }
+
   &[data-device='phone'] {
     --width: 116%;
     --aspectRatio: 7 / 10;

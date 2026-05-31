@@ -7,22 +7,11 @@ import esecTexture from '~/assets/esec.jpg';
 import salonTextureLarge from '~/assets/salonagent-large.jpg';
 import salonTexturePlaceholder from '~/assets/salonagent-placeholder.jpg';
 import salonTexture from '~/assets/salonagent.jpg';
-import gamestackTexture2Large from '~/assets/gamestack-list-large.jpg';
-import gamestackTexture2Placeholder from '~/assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from '~/assets/gamestack-list.jpg';
-import gamestackTextureLarge from '~/assets/gamestack-login-large.jpg';
-import gamestackTexturePlaceholder from '~/assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from '~/assets/gamestack-login.jpg';
-import sliceTextureLarge from '~/assets/slice-app-large.jpg';
-import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
-import sliceTexture from '~/assets/slice-app.jpg';
-import sprTextureLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
-import sprTexturePlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
-import sprTexture from '~/assets/spr-lesson-builder-dark.jpg';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
 import { Profile } from './profile';
+import { ProjectList } from './project-list';
 import { ProjectSummary } from './project-summary';
 import { useEffect, useRef, useState } from 'react';
 import config from '~/config.json';
@@ -62,9 +51,7 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
-  const projectFour = useRef();
-  const projectFive = useRef();
-  const projectSix = useRef();
+  const projectsList = useRef();
   const details = useRef();
 
   useEffect(() => {
@@ -73,9 +60,7 @@ export const Home = () => {
       projectOne,
       projectTwo,
       projectThree,
-      projectFour,
-      projectFive,
-      projectSix,
+      projectsList,
       details,
     ];
 
@@ -165,13 +150,13 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Founding UW's Zero to One Startup-a-thon"
-        description="Co-founded ESEC, UW's entrepreneurship club, and hosted the first-ever Zero to One Startup-a-thon — 100+ student builders across 40 teams, 25+ mentors, and $5K+ in prizes."
+        title="Co-founding one of UW's top startup clubs"
+        description="Co-founded ESEC, one of UW's leading startup clubs — bringing in founders and speakers, placing students into startup internships, and running one of UW's biggest startup events with Claude and the Lavin Program."
         buttonText="View project"
         buttonLink="/projects/esec"
         model={{
           type: 'laptop',
-          alt: 'ESEC Zero to One Startup-a-thon',
+          alt: 'ESEC — UW entrepreneurship club',
           textures: [
             {
               srcSet: `${esecTexture} 1280w, ${esecTextureLarge} 2560w`,
@@ -180,71 +165,10 @@ export const Home = () => {
           ],
         }}
       />
-      <ProjectSummary
-        id="project-4"
-        alternate
-        sectionRef={projectFour}
-        visible={visibleSections.includes(projectFour.current)}
-        index={4}
-        title="AI competitive intelligence agent"
-        description="YC Hackathon winning autonomous AI agent that automates market research through phone-based competitor analysis at scale"
-        buttonText="View project"
-        buttonLink="/projects/ai-intel-agent"
-        model={{
-          type: 'phone',
-          alt: 'AI Competitive Intelligence Agent dashboard',
-          textures: [
-            {
-              srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge} 750w`,
-              placeholder: gamestackTexturePlaceholder,
-            },
-            {
-              srcSet: `${gamestackTexture2} 375w, ${gamestackTexture2Large} 750w`,
-              placeholder: gamestackTexture2Placeholder,
-            },
-          ],
-        }}
-      />
-      <ProjectSummary
-        id="project-5"
-        sectionRef={projectFive}
-        visible={visibleSections.includes(projectFive.current)}
-        index={5}
-        title="AI-powered codebase analytics"
-        description="Full-stack analytics app aggregating GitHub data to surface codebase insights, contributor profiling, and code ownership patterns"
-        buttonText="View project"
-        buttonLink="/projects/codescope"
-        model={{
-          type: 'laptop',
-          alt: 'CodeScope codebase analytics dashboard',
-          textures: [
-            {
-              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
-              placeholder: sliceTexturePlaceholder,
-            },
-          ],
-        }}
-      />
-      <ProjectSummary
-        id="project-6"
-        alternate
-        sectionRef={projectSix}
-        visible={visibleSections.includes(projectSix.current)}
-        index={6}
-        title="Multi-agent AWS infrastructure builder"
-        description="CloudDraft discovers live AWS resources and generates validated Infrastructure-as-Code through LLM-powered multi-agent orchestration"
-        buttonText="View project"
-        buttonLink="/projects/clouddraft"
-        model={{
-          type: 'laptop',
-          alt: 'CloudDraft AWS infrastructure builder',
-          textures: [
-            {
-              srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
-              placeholder: sprTexturePlaceholder,
-            },
-          ],
-        }}
+      <ProjectList
+        id="projects"
+        sectionRef={projectsList}
+        visible={visibleSections.includes(projectsList.current)}
       />
       <Profile
         sectionRef={details}

@@ -13,8 +13,8 @@ import { baseMeta } from '~/utils/meta';
 
 const title = "ESEC — UW's Entrepreneurship Club";
 const description =
-  'Co-founded ESEC at the University of Washington and hosted the first-ever Zero to One Startup-a-thon, bringing 100+ student builders together to ship real products.';
-const roles = ['Co-Founder', 'Events', 'Partnerships', 'Community'];
+  'Co-founded ESEC and grew it into one of UW\'s top startup clubs — bringing in founders and speakers, placing students in startup internships, and running one of UW\'s biggest startup events.';
+const roles = ['Co-Founder', 'Community', 'Partnerships', 'Events'];
 
 export const meta = () => {
   return baseMeta({ title: 'ESEC', description, prefix: 'Projects' });
@@ -27,7 +27,7 @@ export const Esec = () => {
         <ProjectHeader
           title={title}
           description={description}
-          url="https://www.esecuw.org/startup-a-thon"
+          url="https://www.esecuw.org"
           linkLabel="Visit ESEC"
           roles={roles}
         />
@@ -36,10 +36,11 @@ export const Esec = () => {
             <ProjectTextRow>
               <ProjectSectionHeading>Overview</ProjectSectionHeading>
               <ProjectSectionText>
-                ESEC is the student-run entrepreneurship club I co-founded at the
-                University of Washington. It connects students to founders, investors,
-                and Israel&apos;s startup ecosystem through hands-on projects, tech
-                consulting, and startup internships.
+                ESEC is a student-run entrepreneurship club I co-founded at the
+                University of Washington and helped grow into one of the school&apos;s leading
+                startup communities. It connects students to founders, investors, and
+                Israel&apos;s startup ecosystem through hands-on projects, tech consulting, and
+                startup internships.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -47,19 +48,13 @@ export const Esec = () => {
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Zero to One Startup-a-thon</ProjectSectionHeading>
+              <ProjectSectionHeading>Building the club</ProjectSectionHeading>
               <ProjectSectionText>
-                We hosted the first-ever Zero to One Startup-a-thon in April 2026 — a
-                two-day build sprint at the HUB Lyceum, run with the UW Lavin
-                Entrepreneurship Program and the Claude Builder Club @ UW. 100+ of UW&apos;s
-                most ambitious students came out; we selected 40 teams from 100+
-                applications and paired them with 25+ mentors, including a dedicated AI2
-                Incubator coaching room.
-              </ProjectSectionText>
-              <ProjectSectionText>
-                This wasn&apos;t an ideathon. Every team walked in with a working proof of
-                concept and pitched it to founders, mentors, and judges — moving from
-                zero to one over a single weekend.
+                We built ESEC into one of UW&apos;s most active startup clubs — bringing in
+                founders and speakers, and placing students directly into startup
+                internships. A big part of that was partnerships: we lined up the AI2
+                Incubator, Inworld AI, and others to give members real access to people
+                building at the frontier.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -67,13 +62,13 @@ export const Esec = () => {
         <ProjectSection light>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>What teams walked away with</ProjectSectionHeading>
+              <ProjectSectionHeading>Our flagship event</ProjectSectionHeading>
               <ProjectSectionText>
-                Every participant got Claude Pro and API credits, and winning teams
-                competed for $5K+ in prizes, an AI2 Incubator interview, and a year of
-                Formations. Pulling it off meant lining up partners, sponsors, mentors,
-                and venue logistics — and giving UW&apos;s most ambitious builders real
-                runway to go from zero to one.
+                We ran one of the biggest startup events at UW — the Zero to One
+                Startup-a-thon — in partnership with Anthropic&apos;s Claude and the UW Lavin
+                Entrepreneurship Program. 100+ student builders, 40 teams selected from
+                100+ applications, 25+ mentors, and $5K+ in prizes, with every team
+                walking in with a working proof of concept rather than just an idea.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>

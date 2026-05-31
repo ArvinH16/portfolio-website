@@ -27,6 +27,8 @@ export const CodeScope = () => {
         <ProjectHeader
           title={title}
           description={description}
+          url="https://github.com/ArvinH16/codescope"
+          linkLabel="View source"
           roles={roles}
         />
         <ProjectSection padding="top">

@@ -121,10 +121,20 @@ export const Contact = () => {
             >
               <DecoderText text="Say hello" start={status !== 'exited'} delay={300} />
             </Heading>
+            <Text
+              className={styles.subtitle}
+              data-status={status}
+              size="l"
+              as="p"
+              style={getDelay(tokens.base.durationXS, initDelay, 0.4)}
+            >
+              Have a project in mind, want to work together, or just want to connect?
+              Drop me a line.
+            </Text>
             <Divider
               className={styles.divider}
               data-status={status}
-              style={getDelay(tokens.base.durationXS, initDelay, 0.4)}
+              style={getDelay(tokens.base.durationXS, initDelay, 0.5)}
             />
             {/* Hidden honeypot field to identify bots */}
             <Input

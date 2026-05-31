@@ -27,6 +27,8 @@ export const AiIntelAgent = () => {
         <ProjectHeader
           title={title}
           description={description}
+          url="https://github.com/ArvinH16/yc_hackathon"
+          linkLabel="View source"
           roles={roles}
         />
         <ProjectSection padding="top">
