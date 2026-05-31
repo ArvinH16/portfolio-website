@@ -37,7 +37,7 @@ Set the contact-form environment variables (see below) under the project's **Set
 
 ## Contact form
 
-To get the contact form working, create an AWS account and set up SES (Simple Email Service). Copy `.env.example` to `.env` and fill in your details for local development, then add the same variables in the Vercel dashboard for production.
+The contact form sends email through [Resend](https://resend.com). Create an API key, copy `.env.example` to `.env` for local development, and add the same variables in the Vercel dashboard for production. Until you verify a domain in Resend, messages are sent from `onboarding@resend.dev` to the address you signed up with — which is all a contact form needs.
 
 ## Credits
 
