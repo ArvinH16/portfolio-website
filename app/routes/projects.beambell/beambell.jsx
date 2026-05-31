@@ -11,10 +11,15 @@ import {
 import { Fragment } from 'react';
 import { baseMeta } from '~/utils/meta';
 
-const title = 'BeamBell — AI Voice Receptionist';
+const title = 'BeamBell — AI Receptionist';
 const description =
-  'Co-founded and built a production AI voice receptionist platform from 0 to 1, scaling to 9 live locations within 6 weeks of launch.';
-const roles = ['Full-Stack Development', 'AI/Voice Pipeline', 'Product Strategy', 'GTM'];
+  'Co-founded an AI receptionist company and built our first product, SalonAgent, from 0 to 1 — now live and booking clients across multiple salon locations.';
+const roles = [
+  'Co-Founder',
+  'Full-Stack Engineering',
+  'AI Voice Agents',
+  'Go-to-Market',
+];
 
 export const meta = () => {
   return baseMeta({ title: 'BeamBell', description, prefix: 'Projects' });
@@ -27,7 +32,8 @@ export const BeamBell = () => {
         <ProjectHeader
           title={title}
           description={description}
-          url="https://beambell.com"
+          url="https://salonagent.ai"
+          linkLabel="Visit SalonAgent"
           roles={roles}
         />
         <ProjectSection padding="top">
@@ -35,17 +41,18 @@ export const BeamBell = () => {
             <ProjectTextRow>
               <ProjectSectionHeading>Overview</ProjectSectionHeading>
               <ProjectSectionText>
-                Co-founded and built a production AI voice receptionist platform from 0 to
-                1. Scaled to 9 live locations within 6 weeks of launch. Built the
-                full-stack platform using React, Next.js, Node.js, and
-                Supabase/PostgreSQL, along with a real-time voice pipeline using
-                WebSockets, WebRTC, and streaming LLMs — cutting latency by 77.5% (from
-                4.0s to 0.9s).
+                I co-founded BeamBell, an AI receptionist company, and built the
+                platform from 0 to 1 — voice, text, and web agents that answer calls,
+                book appointments, and handle customer questions around the clock. Our
+                first product, SalonAgent, is a dedicated AI phone receptionist for
+                salons that picks up every call with natural warmth so no client slips
+                away.
               </ProjectSectionText>
               <ProjectSectionText>
-                Worked with clients daily, shipping CRM and calendar integrations along
-                with automated workflows to streamline front-desk operations across
-                multiple business verticals.
+                SalonAgent is live and taking real client calls across multiple salon
+                locations. I built the full-stack platform with React, Next.js,
+                Node.js, and Supabase/PostgreSQL, alongside a real-time voice pipeline
+                tuned for genuine back-and-forth conversation.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -53,18 +60,19 @@ export const BeamBell = () => {
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Technical highlights</ProjectSectionHeading>
+              <ProjectSectionHeading>Building the product</ProjectSectionHeading>
               <ProjectSectionText>
-                The voice pipeline was the core engineering challenge — reducing
-                end-to-end latency from over 4 seconds to under 1 second required
-                rearchitecting the streaming stack with WebRTC for audio transport,
-                WebSockets for real-time LLM token streaming, and careful tuning of
-                speech-to-text and text-to-speech integration points.
+                The core of the platform is a streaming voice pipeline — speech-to-text,
+                a reasoning layer over the business&apos;s own data, and text-to-speech —
+                stitched together so the agent can hold a natural conversation, answer
+                business-specific questions, and book straight into the calendar.
               </ProjectSectionText>
               <ProjectSectionText>
-                The platform also included a dashboard for business owners to configure
-                their AI receptionist, view call logs, manage appointments, and integrate
-                with existing tools like Google Calendar and popular CRM systems.
+                An automated onboarding flow provisions a new receptionist by crawling a
+                business&apos;s website and CRM, so an owner can go live quickly. From a
+                dashboard they configure their agent, review call logs and transcripts,
+                manage appointments, and connect existing tools like Google Calendar and
+                their CRM.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -74,11 +82,11 @@ export const BeamBell = () => {
             <ProjectTextRow>
               <ProjectSectionHeading>Outcomes</ProjectSectionHeading>
               <ProjectSectionText>
-                Reached 9 live client locations within 6 weeks of launch. The AI
-                receptionist handled inbound calls, scheduled appointments, answered
-                business-specific questions, and routed complex inquiries — allowing
-                businesses to reduce staffing costs while maintaining a high-quality
-                customer experience around the clock.
+                SalonAgent now answers inbound calls 24/7 across multiple salon
+                locations — booking appointments, answering questions, and routing the
+                calls that need a human. That lets owners capture business they would
+                otherwise miss to voicemail or a busy front desk, while keeping the
+                phone covered after hours and on weekends.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>

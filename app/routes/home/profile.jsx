@@ -22,10 +22,10 @@ const ProfileText = ({ visible, titleId }) => (
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       I&apos;m Arvin, a software engineer and founder based in Seattle. I&apos;m currently building
-      at <Link href="https://arkero.com">Arkero</Link>, shipping full-stack features for a
-      data-driven platform used by professional soccer teams. I also co-founded{" "}
-      <Link href="https://beambell.com">BeamBell</Link>, an AI voice receptionist that
-      scaled to 9 live locations in its first 6 weeks.
+      at <Link href="https://www.arkero.ai">Arkero</Link>, shipping full-stack features for
+      an AI-native platform used by professional sports clubs. I also co-founded{" "}
+      <Link href="https://beambell.com">BeamBell</Link>, an AI receptionist company whose
+      first product, SalonAgent, is live and booking clients across multiple salon locations.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       Alongside that, I lead a team of nine engineers as Technical Program Lead at Propper

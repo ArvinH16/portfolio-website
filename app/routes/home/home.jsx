@@ -1,3 +1,12 @@
+import arkeroTextureLarge from '~/assets/arkero-large.jpg';
+import arkeroTexturePlaceholder from '~/assets/arkero-placeholder.jpg';
+import arkeroTexture from '~/assets/arkero.jpg';
+import esecTextureLarge from '~/assets/esec-large.jpg';
+import esecTexturePlaceholder from '~/assets/esec-placeholder.jpg';
+import esecTexture from '~/assets/esec.jpg';
+import salonTextureLarge from '~/assets/salonagent-large.jpg';
+import salonTexturePlaceholder from '~/assets/salonagent-placeholder.jpg';
+import salonTexture from '~/assets/salonagent.jpg';
 import gamestackTexture2Large from '~/assets/gamestack-list-large.jpg';
 import gamestackTexture2Placeholder from '~/assets/gamestack-list-placeholder.jpg';
 import gamestackTexture2 from '~/assets/gamestack-list.jpg';
@@ -54,6 +63,8 @@ export const Home = () => {
   const projectTwo = useRef();
   const projectThree = useRef();
   const projectFour = useRef();
+  const projectFive = useRef();
+  const projectSix = useRef();
   const details = useRef();
 
   useEffect(() => {
@@ -63,6 +74,8 @@ export const Home = () => {
       projectTwo,
       projectThree,
       projectFour,
+      projectFive,
+      projectSix,
       details,
     ];
 
@@ -111,17 +124,17 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Building an AI voice receptionist"
-        description="Co-founded and built BeamBell from 0 to 1 — an AI voice platform that scaled to 9 live locations, cutting response latency by 77.5%"
+        title="Building the AI platform for pro sports clubs"
+        description="Joined early as a software engineer at Arkero to build an AI-native platform for professional sports clubs — shipping full-stack features now in use by teams across MLS, the NWSL, and the English Football League."
         buttonText="View project"
-        buttonLink="/projects/beambell"
+        buttonLink="/projects/arkero"
         model={{
           type: 'laptop',
-          alt: 'BeamBell AI voice receptionist platform',
+          alt: 'Arkero AI platform for sports clubs',
           textures: [
             {
-              srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
-              placeholder: sprTexturePlaceholder,
+              srcSet: `${arkeroTexture} 1280w, ${arkeroTextureLarge} 2560w`,
+              placeholder: arkeroTexturePlaceholder,
             },
           ],
         }}
@@ -132,6 +145,47 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
+        title="Building an AI receptionist from 0 to 1"
+        description="Co-founded BeamBell, an AI receptionist company, and took our first product — SalonAgent — from 0 to 1. It's a 24/7 voice agent now live and booking clients across multiple salon locations."
+        buttonText="View project"
+        buttonLink="/projects/beambell"
+        model={{
+          type: 'laptop',
+          alt: 'SalonAgent AI receptionist by BeamBell',
+          textures: [
+            {
+              srcSet: `${salonTexture} 1280w, ${salonTextureLarge} 2560w`,
+              placeholder: salonTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-3"
+        sectionRef={projectThree}
+        visible={visibleSections.includes(projectThree.current)}
+        index={3}
+        title="Founding UW's Zero to One Startup-a-thon"
+        description="Co-founded ESEC, UW's entrepreneurship club, and hosted the first-ever Zero to One Startup-a-thon — 100+ student builders across 40 teams, 25+ mentors, and $5K+ in prizes."
+        buttonText="View project"
+        buttonLink="/projects/esec"
+        model={{
+          type: 'laptop',
+          alt: 'ESEC Zero to One Startup-a-thon',
+          textures: [
+            {
+              srcSet: `${esecTexture} 1280w, ${esecTextureLarge} 2560w`,
+              placeholder: esecTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-4"
+        alternate
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
+        index={4}
         title="AI competitive intelligence agent"
         description="YC Hackathon winning autonomous AI agent that automates market research through phone-based competitor analysis at scale"
         buttonText="View project"
@@ -152,10 +206,10 @@ export const Home = () => {
         }}
       />
       <ProjectSummary
-        id="project-3"
-        sectionRef={projectThree}
-        visible={visibleSections.includes(projectThree.current)}
-        index={3}
+        id="project-5"
+        sectionRef={projectFive}
+        visible={visibleSections.includes(projectFive.current)}
+        index={5}
         title="AI-powered codebase analytics"
         description="Full-stack analytics app aggregating GitHub data to surface codebase insights, contributor profiling, and code ownership patterns"
         buttonText="View project"
@@ -172,11 +226,11 @@ export const Home = () => {
         }}
       />
       <ProjectSummary
-        id="project-4"
+        id="project-6"
         alternate
-        sectionRef={projectFour}
-        visible={visibleSections.includes(projectFour.current)}
-        index={4}
+        sectionRef={projectSix}
+        visible={visibleSections.includes(projectSix.current)}
+        index={6}
         title="Multi-agent AWS infrastructure builder"
         description="CloudDraft discovers live AWS resources and generates validated Infrastructure-as-Code through LLM-powered multi-agent orchestration"
         buttonText="View project"
