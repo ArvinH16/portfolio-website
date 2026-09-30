@@ -26,6 +26,12 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
     ', and '
   );
   const currentDiscipline = disciplines.find((item, index) => index === disciplineIndex);
+  // Character count of the longest title line (disciplines get a "+ " prefix),
+  // used to scale the title down so it fits on narrow screens
+  const titleChars = Math.max(
+    config.role.length,
+    ...disciplines.map(item => item.length + 2)
+  );
   const titleId = `${id}-title`;
   const scrollToHash = useScrollToHash();
   const isHydrated = useHydrated();
@@ -72,7 +78,12 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
               <h1 className={styles.name} data-visible={visible} id={titleId}>
                 <DecoderText text={config.name} delay={500} />
               </h1>
-              <Heading level={0} as="h2" className={styles.title}>
+              <Heading
+                level={0}
+                as="h2"
+                className={styles.title}
+                style={cssProps({ titleChars: String(titleChars) })}
+              >
                 <VisuallyHidden className={styles.label}>
                   {`${config.role} + ${introLabel}`}
                 </VisuallyHidden>
