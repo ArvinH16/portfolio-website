@@ -1,0 +1,98 @@
+.caseStudy {
+  width: 100%;
+}
+.header {
+  padding-top: 150px;
+  padding-bottom: 64px;
+  max-width: 1416px;
+  margin: auto;
+}
+.company {
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.title {
+  max-width: 900px;
+  text-wrap: balance;
+  letter-spacing: -0.035em;
+}
+.description {
+  max-width: 740px;
+  font-size: var(--fontSizeBodyXL);
+  line-height: 1.65;
+  color: var(--textBody);
+  margin: 28px 0;
+}
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  margin-bottom: 28px;
+  color: var(--textLight);
+  font-size: 15px;
+}
+.body {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 80px;
+  max-width: 1416px;
+  margin: auto;
+  padding-top: 48px;
+  padding-bottom: 100px;
+  border-top: 1px solid color-mix(in srgb, var(--text) 16%, transparent);
+  align-items: start;
+}
+.outcome {
+  position: sticky;
+  top: 64px;
+}
+.outcome h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 16px;
+  color: var(--textTitle);
+}
+.outcome p {
+  color: var(--textBody);
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+.outcome ul {
+  padding-left: 18px;
+  color: var(--textLight);
+  font-size: 15px;
+  line-height: 1.9;
+}
+.story section {
+  margin-bottom: 48px;
+}
+.story p {
+  font-size: 18px;
+  line-height: 1.85;
+  color: var(--textBody);
+  margin-top: 20px;
+  max-width: 65ch;
+}
+@media (max-width: 800px) {
+  .header {
+    padding-top: 110px;
+    padding-bottom: 40px;
+  }
+  .body {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-top: 32px;
+    padding-bottom: 64px;
+  }
+  .outcome {
+    position: static;
+  }
+  .outcome ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+  }
+}

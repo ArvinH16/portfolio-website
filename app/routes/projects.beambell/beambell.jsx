@@ -1,98 +1,58 @@
-import { Footer } from '~/components/footer';
-import {
-  ProjectContainer,
-  ProjectHeader,
-  ProjectSection,
-  ProjectSectionContent,
-  ProjectSectionHeading,
-  ProjectSectionText,
-  ProjectTextRow,
-} from '~/layouts/project';
-import { Fragment } from 'react';
+import { CaseStudy } from '~/components/case-study/case-study';
 import { baseMeta } from '~/utils/meta';
 
-const title = 'BeamBell — AI Receptionist';
 const description =
-  'Co-founded an AI receptionist company and built our first product, SalonAgent, from 0 to 1 — now live and booking clients across multiple salon locations.';
-const roles = [
-  'Co-Founder',
-  'Full-Stack Engineering',
-  'AI Voice Agents',
-  'Go-to-Market',
-];
+  'I co-founded BeamBell and took our first product, SalonAgent, from 0 to 1: a customer communication and back-office automation platform now used by paying salons across four countries.';
+export const meta = () =>
+  baseMeta({ title: 'BeamBell', description, prefix: 'Projects' });
 
-export const meta = () => {
-  return baseMeta({ title: 'BeamBell', description, prefix: 'Projects' });
-};
-
-export const BeamBell = () => {
-  return (
-    <Fragment>
-      <ProjectContainer>
-        <ProjectHeader
-          title={title}
-          description={description}
-          url="https://salonagent.ai"
-          linkLabel="Visit SalonAgent"
-          roles={roles}
-        />
-        <ProjectSection padding="top">
-          <ProjectSectionContent>
-            <ProjectTextRow>
-              <ProjectSectionHeading>Overview</ProjectSectionHeading>
-              <ProjectSectionText>
-                I co-founded BeamBell, an AI receptionist company, and built the
-                platform from 0 to 1 — voice, text, and web agents that answer calls,
-                book appointments, and handle customer questions around the clock. Our
-                first product, SalonAgent, is a dedicated AI phone receptionist for
-                salons that picks up every call with natural warmth so no client slips
-                away.
-              </ProjectSectionText>
-              <ProjectSectionText>
-                SalonAgent is live and taking real client calls across multiple salon
-                locations. I built the full-stack platform with React, Next.js,
-                Node.js, and Supabase/PostgreSQL, alongside a real-time voice pipeline
-                tuned for genuine back-and-forth conversation.
-              </ProjectSectionText>
-            </ProjectTextRow>
-          </ProjectSectionContent>
-        </ProjectSection>
-        <ProjectSection>
-          <ProjectSectionContent>
-            <ProjectTextRow>
-              <ProjectSectionHeading>Building the product</ProjectSectionHeading>
-              <ProjectSectionText>
-                The core of the platform is a streaming voice pipeline — speech-to-text,
-                a reasoning layer over the business&apos;s own data, and text-to-speech —
-                stitched together so the agent can hold a natural conversation, answer
-                business-specific questions, and book straight into the calendar.
-              </ProjectSectionText>
-              <ProjectSectionText>
-                An automated onboarding flow provisions a new receptionist by crawling a
-                business&apos;s website and CRM, so an owner can go live quickly. From a
-                dashboard they configure their agent, review call logs and transcripts,
-                manage appointments, and connect existing tools like Google Calendar and
-                their CRM.
-              </ProjectSectionText>
-            </ProjectTextRow>
-          </ProjectSectionContent>
-        </ProjectSection>
-        <ProjectSection light>
-          <ProjectSectionContent>
-            <ProjectTextRow>
-              <ProjectSectionHeading>Outcomes</ProjectSectionHeading>
-              <ProjectSectionText>
-                SalonAgent now answers inbound calls 24/7 across multiple salon
-                locations — booking appointments, answering questions, and routing the
-                calls that need a human. That lets owners capture business they would
-                otherwise miss to voicemail or a busy front desk, while keeping the
-                phone covered after hours and on weekends.
-              </ProjectSectionText>
-            </ProjectTextRow>
-          </ProjectSectionContent>
-        </ProjectSection>
-      </ProjectContainer>
-      <Footer />
-    </Fragment>
-  );
-};
+export const BeamBell = () => (
+  <CaseStudy
+    company="BeamBell"
+    title="Building the product. Earning the customer."
+    description={description}
+    positionLabel="Co-Founder & CEO · Seattle"
+    period="February 2025 – Present"
+    url="https://beambell.com"
+    linkLabel="Visit BeamBell"
+    outcome="From the first customer conversation to a live platform serving paying salons across four countries."
+    tools={[
+      'Node.js',
+      'Twilio',
+      'Deepgram',
+      'ElevenLabs',
+      'CRM & scheduling integrations',
+      'Conversation evaluations',
+    ]}
+    sections={[
+      {
+        title: 'From customer discovery to delivery',
+        paragraphs: [
+          'BeamBell started with the work salon owners needed help handling: customer conversations, scheduling, and the administrative tasks behind them. I co-founded the company and built our first product, SalonAgent, from 0 to 1.',
+          'As Co-Founder and CEO, I own customer discovery, technical scoping, and delivery. Working directly with paying salons helps me decide what to build and understand how the product performs in real businesses.',
+        ],
+      },
+      {
+        title: 'Agents that can complete the task',
+        paragraphs: [
+          'I engineered agents that execute tasks inside salon CRM and scheduling systems, together with the execution harnesses that support those actions. The product connects customer communication to the back-office work needed to act on a request.',
+          'The real-time voice pipeline is built with Node.js, Twilio, Deepgram, and ElevenLabs. It connects live calls, speech recognition, agent execution, and spoken responses into one conversation.',
+        ],
+      },
+      {
+        title: 'Reliability during real customer calls',
+        paragraphs: [
+          'I built service health checks that run during live calls, alongside scheduled cron checks. When a component fails, the failure-handling workflow routes alerts and diagnostic context to the engineer responsible for it.',
+          'Monitoring is tied to component ownership, giving the person responding to an issue the context needed to investigate it.',
+        ],
+      },
+      {
+        title: 'A daily feedback loop, with human review',
+        paragraphs: [
+          'I built a daily evaluation framework that scores customer conversations for successful assistance and checks whether the agent followed its configured prompts.',
+          'Evaluation findings and follow-up questions help refine customer context and prompts under human review. That gives us a repeatable way to improve the service as we learn from conversations across different salons.',
+        ],
+      },
+    ]}
+  />
+);
