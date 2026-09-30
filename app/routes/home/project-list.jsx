@@ -18,12 +18,12 @@ const projects = [
     github: 'https://github.com/ArvinH16/yc_hackathon',
   },
   {
-    title: 'CodeScope',
+    title: 'Blitz',
     description:
-      'Full-stack GitHub analytics that surfaces contributor profiles, code ownership, and AI summaries of how a codebase evolves over time.',
-    tags: ['React', 'Next.js', 'Python', 'GitHub API'],
-    href: '/projects/codescope',
-    github: 'https://github.com/ArvinH16/codescope',
+      'Mass SMS and email for clubs and organizations, with member management, contact imports, and QR-based event check-in.',
+    tags: ['Next.js', 'TypeScript', 'Twilio', 'React'],
+    href: '/projects/blitz',
+    github: 'https://github.com/ArvinH16/blitz_mass_communication',
   },
   {
     title: 'CloudDraft',
@@ -31,7 +31,7 @@ const projects = [
       'Multi-agent system that reverse-engineers live AWS environments into clean, validated Infrastructure-as-Code.',
     tags: ['Python', 'Terraform', 'LocalStack', 'Multi-agent'],
     href: '/projects/clouddraft',
-    github: null,
+    github: 'https://github.com/Aur-Shalev-Merin/CloudDraft',
   },
 ];
 

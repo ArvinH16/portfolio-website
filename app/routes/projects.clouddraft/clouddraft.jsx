@@ -13,7 +13,7 @@ import { baseMeta } from '~/utils/meta';
 
 const title = 'CloudDraft — AWS Infrastructure Builder';
 const description =
-  'Built a multi-agent system that discovers live AWS resources and generates validated Infrastructure-as-Code through LLM-powered workflow orchestration.';
+  'Contributed to a multi-agent system that discovers live AWS resources and generates validated Infrastructure-as-Code through LLM-powered workflow orchestration.';
 const roles = ['Multi-Agent Systems', 'Infrastructure as Code', 'AI Integration'];
 
 export const meta = () => {
@@ -27,6 +27,8 @@ export const CloudDraft = () => {
         <ProjectHeader
           title={title}
           description={description}
+          url="https://github.com/Aur-Shalev-Merin/CloudDraft"
+          linkLabel="View source on GitHub"
           roles={roles}
         />
         <ProjectSection padding="top">

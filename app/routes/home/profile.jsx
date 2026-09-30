@@ -25,14 +25,15 @@ const ProfileText = ({ visible, titleId }) => (
       at <Link href="https://www.arkero.ai">Arkero</Link>, shipping full-stack features for
       an AI-native platform used by professional sports clubs. I also co-founded{" "}
       <Link href="https://beambell.com">BeamBell</Link>, an AI receptionist company whose
-      first product, SalonAgent, is live and booking clients across multiple salon locations.
+      first product, SalonAgent, serves paying salons across four countries.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      Alongside that, I lead a team of nine engineers as Technical Program Lead at Propper
-      AI, and I co-founded <Link href="https://esecuw.org">ESEC</Link>, UW&apos;s
-      entrepreneurship and startup club. I&apos;m studying Informatics at the University of
-      Washington, building on a 900+ hour full-stack bootcamp at Coding Dojo. I&apos;m always
-      building something new — feel free to drop me a line.
+      Previously, I built CRM integrations and document migration workflows at Proper.ai,
+      where I mentored nine engineering interns. I also co-founded{' '}
+      <Link href="https://esecuw.org">ESEC</Link>, UW&apos;s entrepreneurship and startup
+      club, growing it to 40+ active members. I&apos;m a senior studying Informatics at
+      the University of Washington. My work connects engineering, customer discovery,
+      and getting useful products into people&apos;s hands.
     </Text>
   </Fragment>
 );

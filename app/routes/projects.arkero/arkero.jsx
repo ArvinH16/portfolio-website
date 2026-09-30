@@ -1,87 +1,55 @@
-import { Footer } from '~/components/footer';
-import {
-  ProjectContainer,
-  ProjectHeader,
-  ProjectSection,
-  ProjectSectionContent,
-  ProjectSectionHeading,
-  ProjectSectionText,
-  ProjectTextRow,
-} from '~/layouts/project';
-import { Fragment } from 'react';
+import { CaseStudy } from '~/components/case-study/case-study';
 import { baseMeta } from '~/utils/meta';
 
-const title = 'Arkero — AI Platform for Pro Sports';
 const description =
-  'An early engineer building Arkero, the AI-native platform for professional sports clubs — now in use by teams across MLS, the NWSL, and the English Football League.';
-const roles = [
-  'Software Engineer',
-  'Full-Stack Engineering',
-  'AI Features',
-  'Enterprise',
-];
+  'I build applied AI agents for professional sports clubs at Arkero, working directly with MLS teams from discovery and technical scoping through on-site deployment.';
+export const meta = () => baseMeta({ title: 'Arkero', description, prefix: 'Projects' });
 
-export const meta = () => {
-  return baseMeta({ title: 'Arkero', description, prefix: 'Projects' });
-};
-
-export const Arkero = () => {
-  return (
-    <Fragment>
-      <ProjectContainer>
-        <ProjectHeader
-          title={title}
-          description={description}
-          url="https://www.arkero.ai"
-          roles={roles}
-        />
-        <ProjectSection padding="top">
-          <ProjectSectionContent>
-            <ProjectTextRow>
-              <ProjectSectionHeading>Overview</ProjectSectionHeading>
-              <ProjectSectionText>
-                Arkero is the AI-native platform for sports businesses. It sits on top of
-                a club&apos;s existing stack — ticketing, CRM, data warehouse, Slack, email —
-                and turns scattered data into predictive insight that helps teams decide
-                what to do next: plan gamedays, drive renewals, and coordinate staff.
-              </ProjectSectionText>
-              <ProjectSectionText>
-                I joined as one of the first engineers to help build the enterprise
-                application, shipping full-stack features end to end for real clubs
-                running live operations on the product.
-              </ProjectSectionText>
-            </ProjectTextRow>
-          </ProjectSectionContent>
-        </ProjectSection>
-        <ProjectSection>
-          <ProjectSectionContent>
-            <ProjectTextRow>
-              <ProjectSectionHeading>What I work on</ProjectSectionHeading>
-              <ProjectSectionText>
-                My work spans the whole stack — the interfaces clubs use day to day, the
-                back-end services behind them, and the integrations that pull a club&apos;s
-                tools into one system. Because this is software professional teams run
-                their gameday and membership operations on, the bar for reliability and
-                polish is high.
-              </ProjectSectionText>
-            </ProjectTextRow>
-          </ProjectSectionContent>
-        </ProjectSection>
-        <ProjectSection light>
-          <ProjectSectionContent>
-            <ProjectTextRow>
-              <ProjectSectionHeading>Impact</ProjectSectionHeading>
-              <ProjectSectionText>
-                The platform is in production at multiple professional clubs across Major
-                League Soccer, the NWSL, and the English Football League — embedding AI
-                into the operations that actually run a club, rather than adding yet
-                another dashboard on the side.
-              </ProjectSectionText>
-            </ProjectTextRow>
-          </ProjectSectionContent>
-        </ProjectSection>
-      </ProjectContainer>
-      <Footer />
-    </Fragment>
-  );
-};
+export const Arkero = () => (
+  <CaseStudy
+    company="Arkero AI"
+    title="From club data to action on the ground."
+    description={description}
+    positionLabel="Engineer · Seattle"
+    period="February 2026 – Present"
+    url="https://www.arkero.ai"
+    linkLabel="Visit Arkero"
+    outcome="A season-ticket outreach agent deployed at San Diego FC helped generate tens of thousands of dollars in its first month."
+    tools={[
+      'Enterprise memory',
+      'Salesforce',
+      'Asana & email',
+      'Ticketing data',
+      'Reverse ETL',
+    ]}
+    sections={[
+      {
+        title: 'Working with the people using the product',
+        paragraphs: [
+          'Arkero builds an enterprise AI platform used by professional sports clubs. My role spans the engineering work and the customer relationship: understanding how a team operates, scoping the right workflow, and helping deploy it on site.',
+          'I work directly with Major League Soccer clients and bring their operational needs and feedback back into the product. That connection keeps the engineering grounded in the work club staff need to get done.',
+        ],
+      },
+      {
+        title: 'Season-ticket outreach at San Diego FC',
+        paragraphs: [
+          'I shipped an agent at San Diego Football Club that combines in-house risk predictions with account history to guide season-ticket outreach. It gives the team relevant context for deciding which accounts to engage and how to approach the conversation.',
+          'The deployment helped generate tens of thousands of dollars in first-month revenue. My contribution connected the predictive work to a workflow the club could use in its day-to-day operations.',
+        ],
+      },
+      {
+        title: 'Memory that carries across workflows',
+        paragraphs: [
+          'I develop the enterprise memory layer behind chat tools and recurring workflows. I built a meeting assistant and knowledge base, and integrate Asana, Salesforce, and email so agents can retrieve relevant context and execute tasks across the tools a club already uses.',
+          'The work connects conversations, organizational knowledge, and operational systems so useful context can carry forward into the next task.',
+        ],
+      },
+      {
+        title: 'Closing the loop with Salesforce',
+        paragraphs: [
+          'I also contributed to ticketing data synchronization and reverse ETL pipelines. These pipelines write model outputs back to Salesforce in bulk, updating ticket-buyer records so club staff can use the results in their existing CRM workflows.',
+        ],
+      },
+    ]}
+  />
+);
