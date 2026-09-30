@@ -20,6 +20,10 @@
     max-width: 780px;
   }
 
+  @media (--mediaTablet) {
+    container-type: inline-size;
+  }
+
   @media (--mediaMobile) {
     top: calc(var(--space3XL) * -1);
   }
@@ -73,6 +77,11 @@
 
 .title {
   letter-spacing: -0.03em;
+
+  /* Shrink to fit the longest line on smaller screens (~0.53em per character) */
+  @media (--mediaTablet) {
+    font-size: min(var(--fontSizeH0), calc(100cqi / (var(--titleChars) * 0.53)));
+  }
 }
 
 .row {

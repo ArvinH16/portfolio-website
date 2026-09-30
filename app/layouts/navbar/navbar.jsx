@@ -17,6 +17,7 @@ export const Navbar = () => {
   const [current, setCurrent] = useState();
   const [menuOpen, setMenuOpen] = useState(false);
   const [target, setTarget] = useState();
+  const [logoTrace, setLogoTrace] = useState(0);
   const { theme } = useTheme();
   const location = useLocation();
   const windowSize = useWindowSize();
@@ -148,9 +149,12 @@ export const Navbar = () => {
         data-navbar-item
         className={styles.logo}
         aria-label={`${config.name}, ${config.role}`}
-        onClick={handleMobileNavClick}
+        onClick={event => {
+          setLogoTrace(count => count + 1);
+          handleMobileNavClick(event);
+        }}
       >
-        <Monogram highlight />
+        <Monogram highlight trace={logoTrace} />
       </RouterLink>
       <NavToggle onClick={() => setMenuOpen(!menuOpen)} menuOpen={menuOpen} />
       <nav className={styles.nav}>
