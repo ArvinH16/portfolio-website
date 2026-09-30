@@ -1,4 +1,6 @@
 .summary {
+  /* Positioned so it paints above the intro sphere canvas, which bleeds past the intro */
+  position: relative;
   width: 100%;
   padding-top: 72px;
   padding-bottom: 72px;
